@@ -1,4 +1,4 @@
-name: ipq807x-5.15 - Build remote repo only if new commits were pushed
+name: ipq807x-5.15-bitthief - Build remote repo only if new commits were pushed
 on:
   workflow_dispatch:
   push:
@@ -13,7 +13,7 @@ jobs:
         run: |
           curl -sL "https://api.github.com/repos/$REMOTE_REPOSITORY/commits?sha=$REMOTE_BRANCH&per_page=1" | jq -r '[.[]][0]' > commit.json
         env:
-          REMOTE_REPOSITORY: robimarko/openwrt
+          REMOTE_REPOSITORY: bitthief/openwrt
           REMOTE_BRANCH: ipq807x-5.15
       - name: Calculate hours since last commit
         id: calc
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: robimarko/openwrt
+          repository: bitthief/openwrt
           ref: ipq807x-5.15
       - name: Update and install feeds
         run: |
@@ -116,7 +116,7 @@ jobs:
         with:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           prerelease: true
-          title: 'Updated prebuilt images (${{ env.BUILDINFO }})'
-          automatic_release_tag: ipq807x-5.15-latest
+          title: '[bitthief] Updated prebuilt images (${{ env.BUILDINFO }})'
+          automatic_release_tag: ipq807x-5.15-bitthief
           files: bin/targets/ipq807x/generic/*
      

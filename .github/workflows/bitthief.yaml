@@ -59,7 +59,11 @@ jobs:
           echo "CONFIG_PACKAGE_nss-firmware-ipq8074=y\n" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-dp=y" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-drv-pppoe=y\n" >> .config
+          echo "CONFIG_PACKAGE_kmod-qca-nss-drv-vlan-mgr=y\n" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-ecm=y\n" >> .config
+          echo "CONFIG_PACKAGE_kmod-shortcut-fe=y\n" >> .config
+          echo "CONFIG_PACKAGE_kmod-shortcut-fe-drv=y\n" >> .config
+          echo "CONFIG_PACKAGE_kmod-qca-ssdk-nohnat=y\n" >> .config
           echo "CONFIG_PACKAGE_kmod-qca-nss-drv-bridge-mgr=y\n" >> .config
           echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config

@@ -50,9 +50,7 @@ jobs:
         run: |
           echo "CONFIG_TARGET_ipq807x=y" > .config
           echo "CONFIG_TARGET_ipq807x_generic=y\n" >> .config
-          echo "CONFIG_TARGET_MULTI_PROFILE=y\n" >> .config
-          echo "CONFIG_TARGET_ALL_PROFILES=y\n" >> .config
-          echo "CONFIG_TARGET_PER_DEVICE_ROOTFS=y\n" >> .config
+          echo "CONFIG_TARGET_ipq807x_generic_DEVICE_redmi_ax6=y\n" >> .config
           echo "CONFIG_TARGET_ROOTFS_INITRAMFS=y\n" >> .config
           echo "CONFIG_TARGET_INITRAMFS_COMPRESSION_ZSTD=y\n" >> .config
           echo "CONFIG_PACKAGE_luci=y\n" >> .config

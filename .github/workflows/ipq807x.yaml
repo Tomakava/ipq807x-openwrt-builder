@@ -58,13 +58,20 @@ jobs:
           echo "CONFIG_PACKAGE_wpad-wolfssl=y\n" >> .config
           #### CUSTOM PACKAGES HERE ###
           echo "CONFIG_PACKAGE_openvpn-openssl=y" >> .config
-          echo "CONFIG_PACKAGE_wireguard=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-openvpn=y" >> .config
-          echo "CONFIG_PACKAGE_luci-app-wireguard=y" >> .config
-          echo "CONFIG_PACKAGE_luci-app-ddns=y" >> .config
-          echo "CONFIG_PACKAGE_qrencode=y" >> .config
           echo "CONFIG_PACKAGE_gre=y\n" >> .config
           echo "CONFIG_PACKAGE_luci-proto-gre=y\n" >> .config
+          echo "CONFIG_PACKAGE_qca-ssdk-shell=y\n" >> .config
+          echo "CONFIG_PACKAGE_htop=y" >> .config
+          echo "CONFIG_PACKAGE_luci-mod-rpc=y" >> .config
+          echo "CONFIG_PACKAGE_iperf3=y" >> .config
+          echo "CONFIG_PACKAGE_mc=y" >> .config
+          echo "CONFIG_PACKAGE_iw-full=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-l2tp-eth=y" >> .config
+          echo "CONFIG_PACKAGE_ip-full=y" >> .config
+          echo "CONFIG_PACKAGE_tcpdump=y" >> .config
+          echo "CONFIG_PACKAGE_https-dns-proxy=y" >> .config
+          echo "CONFIG_PACKAGE_luci-app-https-dns-proxy=y" >> .config
           make defconfig
       - name: Enable WiFi on default config
         run: |
